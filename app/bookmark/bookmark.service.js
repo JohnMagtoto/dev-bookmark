@@ -26,8 +26,12 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             exports_1("Bookmark", Bookmark);
             BookmarkService = (function () {
                 function BookmarkService() {
+                    this._bookmarkdb = new PouchDB("bookmarks");
                 }
                 BookmarkService.prototype.getBookmarks = function () {
+                    this._bookmarkdb.info().then(function (info) {
+                        console.log(info);
+                    });
                     return [
                         { title: "youtube", url: "www.youtube.com" },
                         { title: "wikipedia", url: "en.wikipedia.com" }
