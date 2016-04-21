@@ -1,4 +1,4 @@
-System.register(['angular2/core', './bookmark.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'ng2-bootstrap/ng2-bootstrap', './bookmark.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core', './bookmark.service'], function(exports_1, con
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, bookmark_service_1;
+    var core_1, ng2_bootstrap_1, bookmark_service_1;
     var BookmarlListComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (ng2_bootstrap_1_1) {
+                ng2_bootstrap_1 = ng2_bootstrap_1_1;
             },
             function (bookmark_service_1_1) {
                 bookmark_service_1 = bookmark_service_1_1;
@@ -32,6 +35,10 @@ System.register(['angular2/core', './bookmark.service'], function(exports_1, con
                     core_1.Component({
                         selector: 'bookmark-list-component',
                         templateUrl: './app/bookmark/bookmark-list.component.html',
+                        directives: [
+                            ng2_bootstrap_1.Alert,
+                            ng2_bootstrap_1.BUTTON_DIRECTIVES
+                        ],
                         providers: [
                             bookmark_service_1.BookmarkService
                         ]

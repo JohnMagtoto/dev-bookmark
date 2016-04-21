@@ -2,7 +2,14 @@
   <head>
     <title>Angular 2 Heroes Tutorial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- Material Design Lite ; Hint: Last resort -->
+    <!-- <link rel="stylesheet" href="assets/gray-amber-material.min.css">
+    <script src="assets/material.min.js"></script> -->
+    <!-- ng2-bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/ionicons.css">
+
+    </script>
 
     <!-- 1. Load libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
@@ -18,6 +25,9 @@
 
     <script src="node_modules/angular2/bundles/http.js"></script>
 
+
+    <script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
+
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
@@ -30,6 +40,9 @@
             format: 'register',
             defaultExtension: 'js'
           }
+        },
+        map: {
+          moment: 'node_modules/moment/moment.js'
         }
       });
       System.import('app/main')
