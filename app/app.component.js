@@ -1,4 +1,4 @@
-System.register(['angular2/core', './bookmark/bookmark-list.component', './bookmark/bookmark.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './bookmark/bookmark-list.component', './bookmark/bookmark.component', './bookmark/bookmark.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,34 +10,59 @@ System.register(['angular2/core', './bookmark/bookmark-list.component', './bookm
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, bookmark_list_component_1, bookmark_service_1;
+    var core_1, router_1, bookmark_list_component_1, bookmark_component_1, bookmark_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
+            function (router_1_1) {
+                router_1 = router_1_1;
+            },
             function (bookmark_list_component_1_1) {
                 bookmark_list_component_1 = bookmark_list_component_1_1;
+            },
+            function (bookmark_component_1_1) {
+                bookmark_component_1 = bookmark_component_1_1;
             },
             function (bookmark_service_1_1) {
                 bookmark_service_1 = bookmark_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(_location) {
+                    this._location = _location;
                     this.title = "Tour of Heroes";
+                    _location.go("/bookmark-list");
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>{{Title}}</h1>\n    <bookmark-list-component></bookmark-list-component>\n    ",
-                        directives: [bookmark_list_component_1.BookmarlListComponent],
+                        template: "\n    <h1>{{Title}}</h1>\n    <router-outlet></router-outlet>\n    ",
+                        directives: [
+                            router_1.ROUTER_DIRECTIVES,
+                            bookmark_list_component_1.BookmarkListComponent
+                        ],
                         providers: [
+                            router_1.Location,
                             bookmark_service_1.BookmarkService
                         ]
-                    }), 
-                    __metadata('design:paramtypes', [])
+                    }),
+                    router_1.RouteConfig([
+                        {
+                            path: '/bookmark-list',
+                            name: 'BookmarkList',
+                            component: bookmark_list_component_1.BookmarkListComponent,
+                            useAsDefault: true
+                        },
+                        {
+                            path: '/bookmark',
+                            name: 'Bookmark',
+                            component: bookmark_component_1.BookmarkComponent
+                        }
+                    ]), 
+                    __metadata('design:paramtypes', [router_1.Location])
                 ], AppComponent);
                 return AppComponent;
             }());

@@ -11,7 +11,7 @@ System.register(['angular2/core', 'ng2-bootstrap/ng2-bootstrap', './bookmark.ser
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, ng2_bootstrap_1, bookmark_service_1;
-    var BookmarlListComponent;
+    var BookmarkListComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -24,14 +24,14 @@ System.register(['angular2/core', 'ng2-bootstrap/ng2-bootstrap', './bookmark.ser
                 bookmark_service_1 = bookmark_service_1_1;
             }],
         execute: function() {
-            BookmarlListComponent = (function () {
-                function BookmarlListComponent(_boorkmarkService) {
+            BookmarkListComponent = (function () {
+                function BookmarkListComponent(_boorkmarkService) {
                     this._boorkmarkService = _boorkmarkService;
                     this.bookmarks = this._boorkmarkService.getBookmarks();
                 }
-                BookmarlListComponent.prototype.ngOnInit = function () {
+                BookmarkListComponent.prototype.ngOnInit = function () {
                 };
-                BookmarlListComponent = __decorate([
+                BookmarkListComponent = __decorate([
                     core_1.Component({
                         selector: 'bookmark-list-component',
                         templateUrl: './app/bookmark/bookmark-list.component.html',
@@ -44,10 +44,10 @@ System.register(['angular2/core', 'ng2-bootstrap/ng2-bootstrap', './bookmark.ser
                         ]
                     }), 
                     __metadata('design:paramtypes', [bookmark_service_1.BookmarkService])
-                ], BookmarlListComponent);
-                return BookmarlListComponent;
+                ], BookmarkListComponent);
+                return BookmarkListComponent;
             }());
-            exports_1("BookmarlListComponent", BookmarlListComponent);
+            exports_1("BookmarkListComponent", BookmarkListComponent);
         }
     }
 });

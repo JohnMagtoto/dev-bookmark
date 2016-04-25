@@ -16,7 +16,7 @@ import { BookmarkService, Bookmark } from './bookmark.service' ;
   ]
 })
 
-export class BookmarlListComponent implements OnInit {
+export class BookmarkListComponent implements OnInit {
   bookmarks : Bookmark[] ;
 
   constructor(
