@@ -1,4 +1,4 @@
-import { Component, OnInit } from 'angular2/core' ;
+import { Component, OnInit } from '@angular/core' ;
 
 // Service
 import { BookmarkService, Bookmark } from './bookmark.service' ;

@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 export class Bookmark {
   constructor(title : String,
@@ -8,7 +8,7 @@ export class Bookmark {
 @Injectable()
 export class BookmarkService {
 
-  getBookmarks() {
+  getBookmarks() : Bookmark[] {
     return [
       { title : "youtube",  url : "www.youtube.com"},
       { title : "wikipedia",  url : "en.wikipedia.com"}

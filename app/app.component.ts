@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core' ;
+import { Component } from '@angular/core' ;
 import { BookmarlListComponent } from './bookmark/bookmark-list.component';
 import { BookmarkService } from './bookmark/bookmark.service' ;
 
