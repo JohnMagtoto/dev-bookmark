@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-export class Bookmark {
-  constructor(title : String,
-  url : String){}
+export interface Bookmark {
+  title : string ;
+  url : string ;
 }
 
 @Injectable()

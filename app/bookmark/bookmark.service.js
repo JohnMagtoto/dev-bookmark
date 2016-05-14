@@ -11,19 +11,13 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var Bookmark, BookmarkService;
+    var BookmarkService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Bookmark = (function () {
-                function Bookmark(title, url) {
-                }
-                return Bookmark;
-            }());
-            exports_1("Bookmark", Bookmark);
             BookmarkService = (function () {
                 function BookmarkService() {
                 }
