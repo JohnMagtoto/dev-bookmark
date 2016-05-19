@@ -1,11 +1,13 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.DS_Store": true,
-        
-        "**/*.js.map" : true,
-        "app/**/*.js" : {"when": "$(basename).ts"}
-    }
+  "files.exclude": {
+		"**/nativescript/platforms": true,
+    "src/client/**/*.js": true,
+    "nativescript/app/**/*.js": true
+	},
+  "search.exclude": {
+		"**/nativescript/platforms": true,
+    "src/client/**/*.js": true,
+    "nativescript/app/**/*.js": true
+	}
 }

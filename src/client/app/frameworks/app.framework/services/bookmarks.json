@@ -1,0 +1,37 @@
+{ 
+  "data" : 
+    [
+        {
+            "title" : "Youtube",
+            "url" : "www.youtube.com"
+        },
+        {
+            "title" : "Wikipedia",
+            "url" : "en.wikipedia.org"
+        },
+        {
+            "title" : "Github",
+            "url" : "www.github.com"
+        },
+        {
+            "title" : "NathanWalker/angular2-seed-advanced",
+            "url" : "www.github.com/NathanWalker/angular2-seed-advanced"
+        },
+        {
+            "title" : "Angular Unit Testing Quick Start",
+            "url" : "http://angulartestingquickstart.com/mocking"
+        },
+        {
+            "title" : "Front-End Developer Handbook",
+            "url" : "https://frontendmasters.gitbooks.io/front-end-handbook/content/index.html"
+        },
+        {
+            "title" : "Workmanship Manual",
+            "url" : "http://workmanship.io/"
+        },
+        {
+            "title" : "Electron",
+            "url" : "http://electron.atom.io/"
+        }
+    ]
+}
