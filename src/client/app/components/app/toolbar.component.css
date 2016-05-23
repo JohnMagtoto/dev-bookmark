@@ -16,13 +16,16 @@ h1 {
 }
 
 :host lang-switcher,
-:host more {
+:host more,
+input.toolbar_search {
   position: absolute;
 }
 
 :host lang-switcher {
-  top: 13px;
-  right: 52px;
+  top: -50px;
+  right: -52px;
+  z-index: -100000;
+  visibility: hidden;
 }
 
 :host more {
@@ -37,4 +40,9 @@ h1 {
 
 :host more:hover {
   opacity: 1;
+}
+
+input.toolbar_search {
+  top: 3px;
+  right: 20px;
 }

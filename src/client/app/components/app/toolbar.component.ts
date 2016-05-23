@@ -1,5 +1,5 @@
 // app
-import {BaseComponent, LogService} from '../../frameworks/core.framework/index';
+import {BaseComponent} from '../../frameworks/core.framework/index';
 import {LangSwitcherComponent} from '../../frameworks/i18n.framework/index';
 import {NavbarComponent} from './navbar.component';
 
@@ -11,9 +11,9 @@ import {NavbarComponent} from './navbar.component';
 })
 export class ToolbarComponent {
   
-  constructor(private log: LogService) {}
+  constructor() {}
   
-  public openLanguages(e: any): void {
-    this.log.debug('openLanguages');
-  }
+  // public openLanguages(e: any): void {
+  //   this.log.debug('openLanguages');
+  // }
 }

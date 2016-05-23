@@ -24,21 +24,26 @@ import { BookmarksComponent } from '../bookmarks/bookmarks.component' ;
   changeDetection: ChangeDetectionStrategy.Default // Everything else uses OnPush
 })
 @RouteConfig([
-  {
-    path: '/',
-    component: HomeComponent,
-    name: 'Home'
-  },
-  {
-    path: '/about',
-    component: AboutComponent,
-    name: 'About'
-  },
-  {
-    path : '/bookmarks',
-    component : BookmarksComponent,
-    name : 'Bookmarks'
-  }
+  // {
+  //   path: '/',
+  //   component: HomeComponent,
+  //   name: 'Home'
+  // },
+  // {
+  //   path: '/about',
+  //   component: AboutComponent,
+  //   name: 'About'
+  // },
+  // {
+  //   path : '/bookmarks',
+  //   component : BookmarksComponent,
+  //   name : 'Bookmarks'
+  // }
+    {
+      path : '/',
+      component : BookmarksComponent,
+      name : 'Bookmarks'
+    }
 ])
 export class AppComponent {
   constructor(public analytics: AnalyticsService) {

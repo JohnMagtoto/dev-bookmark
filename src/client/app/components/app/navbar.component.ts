@@ -14,31 +14,42 @@ import {RouteComponent} from '../../frameworks/core.framework/index';
 export class NavbarComponent {
   // TODO: remove when {N} router supports active states
   public activeLink: any = {
-    home: true,
-    about: false,
+    // home: true,
+    // about: false,
+    folders : true,
     bookmarks : false
   };
   
   constructor(public store: Store<AppStoreI>) {  
     store.select('router').subscribe((router: RouterState) => {
       if (!router.navigating) {
-        switch (router.url) {
-          case '':
-            this.activeLink.home = true;
-            this.activeLink.about = false;
-            this.activeLink.bookmarks = false;
-            break;
-          case '/about':
-            this.activeLink.home = false;
-            this.activeLink.about = true;
-            this.activeLink.bookmarks = false;
-            break;
-          case '/bookmarks':
-            this.activeLink.home = false;
-            this.activeLink.about = false;
-            this.activeLink.bookmarks = true;
-            break;
-        }
+        // switch (router.url) {
+        //   case '':
+        //     this.activeLink.home = true;
+        //     this.activeLink.about = false;
+        //     this.activeLink.bookmarks = false;
+        //     break;
+        //   case '/about':
+        //     this.activeLink.home = false;
+        //     this.activeLink.about = true;
+        //     this.activeLink.bookmarks = false;
+        //     break;
+        //   case '/bookmarks':
+        //     this.activeLink.home = false;
+        //     this.activeLink.about = false;
+        //     this.activeLink.bookmarks = true;
+        //     break;
+        // }
+        // switch (router.url){
+        //   case '' :
+        //     this.activeLink.folders = true ;
+        //     this.activeLink.bookmarks = false ;
+        //     break ;
+        //   case '/bookmarks' :
+        //     this.activeLink.folders = false ;
+        //     this.activeLink.bookmarks = true ;
+        //     break ;
+        // }
       }
     });
   }

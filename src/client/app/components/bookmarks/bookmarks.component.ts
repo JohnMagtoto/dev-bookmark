@@ -3,7 +3,7 @@ import { HTTP_PROVIDERS } from '@angular/http' ;
 import { Observable } from 'rxjs/Rx' ;
 
 import { BookmarksService, Bookmark } from '../../frameworks/app.framework/index' ;
-// import {MultilingualService} from '../../frameworks/i18n.framework/index';
+import { BookmarkListComponent } from './bookmarklist.component' ;
 
 import {Store} from '@ngrx/store';
 
@@ -11,7 +11,8 @@ import {BaseComponent} from '../../frameworks/core.framework/index';
 
 @BaseComponent({
     selector : "bookmarks",
-    templateUrl : "./app/components/bookmarks/bookmarks.component.html"
+    templateUrl : "./app/components/bookmarks/bookmarks.component.html",
+    directives : [ BookmarkListComponent ]
 })
 
 export class BookmarksComponent implements OnInit {
@@ -28,5 +29,13 @@ export class BookmarksComponent implements OnInit {
     
     getBookmarks() {
         this.bookmarkService.getBookmarks() ;
+    }
+    
+    editItem(bookmark : Bookmark){
+        console.log(bookmark.title)
+    }
+    
+    deleteItem(bookmark : Bookmark){
+        console.log(bookmark.title)
     }
 }

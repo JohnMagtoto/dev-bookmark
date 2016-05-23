@@ -1,4 +1,4 @@
-<h1>Bookmarks</h1>
-<ul>
-    <li *ngFor = "let bookmark of (bookmarks | async)"> {{ bookmark.title }} </li>
-</ul>
+<bookmark-list [bookmarks]="bookmarks | async"
+    (edit)="editItem($event)"
+    (delete)="deleteItem($event)"
+></bookmark-list>

@@ -7,9 +7,11 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
   constructor() {
     super();
-    // this.APP_TITLE = 'Put name of your app here';
+    this.APP_TITLE = 'Developer Bookmarker';
     let additional_deps: InjectableDependency[] = [
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
+      {src : 'bootstrap/dist/css/bootstrap.min.css', inject: true},
+      {src : 'bootstrap/dist/fonts/*', inject: true}
     ];
 
     const seedDependencies = this.NPM_DEPENDENCIES;

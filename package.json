@@ -1,9 +1,9 @@
 {
-  "name": "angular2-seed-advanced",
+  "name": "dev-bookmark",
   "version": "0.0.0",
-  "description": "Advanced seed for Angular 2 apps",
+  "description": "Developer Bookmarker toy project of Enceladus for testing the viability of doing desktop apps with Angular 2 and Electron",
   "repository": {
-    "url": "https://github.com/NathanWalker/angular2-seed-advanced"
+    "url": "https://github.com/JohnMagtoto/dev-bookmark"
   },
   "scripts": {
     "build.desktop.mac": "rimraf desktop/mac/* && gulp desktop.mac",
@@ -43,10 +43,13 @@
     "webdriver-start": "node_modules/protractor/bin/webdriver-manager start",
     "webdriver-update": "node_modules/protractor/bin/webdriver-manager update"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "John Magtoto <JohnMagtoto>",
   "contributors": [
     {
       "name": "Nathan Walker <NathanWalker>"
+    },
+    {
+      "name" : "Minko Gechev <mgechev>"
     }
   ],
   "license": "MIT",
@@ -142,6 +145,7 @@
     "@angular/router-deprecated": "2.0.0-rc.1",
     "@ngrx/store": "^1.5.0",
     "angulartics2": "^1.0.11",
+    "bootstrap": "^3.3.6",
     "es6-module-loader": "^0.17.8",
     "es6-promise": "^3.1.2",
     "es6-shim": "0.35.0",

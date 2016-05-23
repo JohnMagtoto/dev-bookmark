@@ -1,0 +1,9 @@
+<ul>
+    <li class="bookmark-element" *ngFor = "let bookmark of bookmarks"> 
+        <div>
+            {{bookmark.title}}  
+            <button (click)="edit.emit(bookmark)">Edit</button>
+            <button (click)="delete.emit(bookmark)">Delete</button>
+        </div>
+    </li>
+</ul>
